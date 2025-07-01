@@ -18,15 +18,4 @@
 import Hero from "@/components/hero.vue";
 import SectionTitle from "@/components/sectionTitle.vue";
 import ProjectCard from "@/components/projectCard.vue";
-
-const featuredProjects = [
-  {
-    id: 1,
-    title: "Modern Dashboard UI",
-    description: "Admin dashboard with charts and auth system",
-    image: "/images/project1.png",
-    tags: ["Vue", "Tailwind", "Chart.js"],
-  },
-  // Add more...
-];
 </script>

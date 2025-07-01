@@ -2,7 +2,13 @@
   <div class="min-h-screen flex flex-col bg-white text-gray-900">
     <header class="p-6 shadow-md bg-white z-50">
       <nav class="flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-xl font-bold text-indigo-600">MyPortfolio</h1>
+        <h1
+          class="text-xl md:text-xl font-extrabold text-gray-900 dark:text-dark leading-tight tracking-tight animate-fade-in"
+        >
+          Roo
+          <span class="text-indigo-600 dark:text-indigo-400">Portfolio</span
+          ><br />
+        </h1>
         <ul class="flex gap-6 text-sm font-medium">
           <li>
             <NuxtLink to="/" class="hover:text-indigo-600">Home</NuxtLink>
