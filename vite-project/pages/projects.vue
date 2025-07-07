@@ -3,8 +3,8 @@
     <div class="max-w-6xl mx-auto">
       <SectionTitle title="My Projects" />
       <p class="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-3xl">
-        Here are some of the ideas I've brought to life. Click on any project to
-        learn more about the stack, goals, and process behind it.
+        Here I showcase some of my projects. Each project is tagged with the
+        technologies used to make it. Click on a project to learn more.
       </p>
 
       <!-- Project Grid -->
@@ -101,43 +101,71 @@ const openModal = (project) => {
 const projects = [
   {
     id: 1,
-    name: "Portfolio Site",
-    short: "A sleek developer portfolio built with Nuxt and Tailwind.",
+    name: "Annex Bios",
+    short: "A website made for browsing through an online theater",
     description:
-      "This responsive and accessible portfolio website showcases my work, skills, and personality. It features Nuxt.js for SSR and TailwindCSS for styling.",
-    thumbnail: "/projects/portfolio.png",
-    tags: ["Nuxt", "TailwindCSS", "Vue", "Design"],
-    link: "https://yourportfolio.com",
+      "A website for a fictive theather, made to browse through (upcoming) movies. Made by me and other members. Part of a bigger project. Visit the project for more information.",
+    thumbnail: "/Annex.webp",
+    tags: ["PHP", "CSS"],
+    link: "https://github.com/CodoWIzard/Annex-Bios",
   },
   {
     id: 2,
-    name: "E-Commerce UI",
-    short: "A modern frontend for an online store.",
-    description:
-      "Built a dynamic and responsive UI for a fashion e-commerce store using Vue, animations, and reusable components.",
-    thumbnail: "/projects/ecommerce.png",
-    tags: ["Vue", "UI/UX", "eCommerce", "Animations"],
-    link: "https://ecommerce-demo.com",
+    name: "Fiction Event PWA",
+    short: "A PWA for users to check event information and more.",
+    description: "PWA made with Vue",
+    thumbnail: "/logoWhite.webp",
+    tags: ["Vue", "TailwindCSS"],
+    link: "https://wpa-app.vercel.app/",
   },
   {
     id: 3,
-    name: "Analytics Dashboard",
-    short: "A full-featured dashboard for tracking metrics.",
+    name: "Happy Herbivore",
+    short: "A self service kiosk application for a fictive company",
     description:
-      "Includes charts, user management, and responsive cards using Tailwind, Vue, and Chart.js. Designed for SaaS startups.",
-    thumbnail: "/projects/dashboard.png",
-    tags: ["Vue", "Tailwind", "Chart.js", "Node.js"],
-    link: "https://analytics-demo.com",
+      "Able to filter, delete and order products. Take a look at the project to learn more.",
+    thumbnail: "/restaurant.webp",
+    tags: ["PHP", "TypeScript", "SCSS"],
+    link: "https://github.com/CodoWIzard/hbc-software-solutions",
   },
   {
     id: 4,
-    name: "Analytics Dashboard",
-    short: "A full-featured dashboard for tracking metrics.",
+    name: "Travel Blog Japan",
+    short: "A static one pager for checking out top destinations in Japan.",
     description:
-      "Includes charts, user management, and responsive cards using Tailwind, Vue, and Chart.js. Designed for SaaS startups.",
-    thumbnail: "/projects/dashboard.png",
-    tags: ["Vue", "Tailwind", "Chart.js", "Node.js"],
+      "A static one pager. Comes along with a location mapper which needs fixing.",
+    thumbnail: "/Fuji.jpeg",
+    tags: ["HTML", "CSS"],
+    link: "https://github.com/GLU-CSD/web-weekopdracht-3-infographic-CodoWIzard",
+  },
+  {
+    id: 5,
+    name: "Focus6",
+    short: "A website made for a client's business.",
+    description:
+      "A project I collaborated on with other members. Visit the website to learn more.",
+    thumbnail: "/focus.png",
+    tags: ["Svelte", "TailwindCSS"],
+    link: "https://www.focus6.nl/",
+  },
+  {
+    id: 6,
+    name: "Scientific Calculator",
+    short: "A properly working and accurate calculator.",
+    description: "Visit the project to experiment with the calculator.",
+    thumbnail: "/calc.jpg",
+    tags: ["JavaScript"],
     link: "https://analytics-demo.com",
+  },
+  {
+    id: 7,
+    name: "Comment Section Wall",
+    short: "A wall able to comment to a video.",
+    description:
+      "A project to learn and exercise SQL and database methodologies.",
+    thumbnail: "/comment.avif",
+    tags: ["PHP", "SQL", "CSS"],
+    link: "https://github.com/GLU-CSD/web-weekopdracht-2-comments-sectie-CodoWIzard",
   },
 ];
 </script>

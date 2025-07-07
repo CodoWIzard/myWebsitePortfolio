@@ -16,10 +16,10 @@
 
       <div class="mt-8 animate-fade-in delay-300">
         <NuxtLink
-          to="About"
+          to="Projects"
           class="inline-block px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium text-lg hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 transition-all dark:focus:ring-indigo-800"
         >
-          Get to know me
+          Get inspired by my projects! 👆
         </NuxtLink>
       </div>
     </div>

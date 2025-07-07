@@ -12,7 +12,7 @@
     <!-- Contact Form -->
     <div class="max-w-2xl mx-auto">
       <form
-        action="https://formspree.io/f/yourformid"
+        action="https://formspree.io/f/mblyebpo"
         method="POST"
         class="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl"
       >
@@ -48,26 +48,9 @@
 
     <!-- Social Media Links -->
     <div class="mt-16 text-center space-y-6">
-      <p class="text-gray-700 dark:text-gray-300 text-lg">
-        Or connect with me here:
-      </p>
       <div class="flex justify-center gap-6">
         <a
-          href="https://twitter.com/yourhandle"
-          target="_blank"
-          class="text-indigo-600 dark:text-indigo-400 hover:text-purple-600 transition text-xl"
-        >
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a
-          href="https://linkedin.com/in/yourhandle"
-          target="_blank"
-          class="text-indigo-600 dark:text-indigo-400 hover:text-purple-600 transition text-xl"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a
-          href="mailto:your@email.com"
+          href="mailto:jayden.budike@gmail.com"
           class="text-indigo-600 dark:text-indigo-400 hover:text-purple-600 transition text-xl"
         >
           <i class="fas fa-envelope"></i>
@@ -77,7 +60,7 @@
       <!-- GitHub Button -->
       <div class="mt-8">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/CodoWIzard"
           target="_blank"
           class="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition transform"
         >
@@ -89,8 +72,5 @@
 </template>
 
 <script setup>
-// No logic needed unless dynamic features are added later
+// maybe for later
 </script>
-
-<!-- Optional: Add fontawesome if not already globally loaded -->
-<!-- You can load it once globally in your layout or HTML -->
