@@ -171,7 +171,7 @@ const projects = [
 </script>
 
 <style scoped>
-/* Optional: clamp text neatly */
+/* Optional */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
