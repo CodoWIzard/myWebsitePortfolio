@@ -1,53 +1,54 @@
+<script setup>
+import { onMounted } from "vue";
+const { $gsap } = useNuxtApp();
+
+onMounted(() => {
+  // Hero fade-in
+  $gsap.from("#hero h1, #hero p, #hero a", {
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    stagger: 0.2,
+  });
+});
+
+// Scroll to Projects on click
+function scrollToProjects() {
+  $gsap.to(window, {
+    duration: 1,
+    scrollTo: "#projects",
+    ease: "power2.inOut",
+  });
+}
+</script>
+
 <template>
-  <section class="min-h-screen flex items-center justify-center bg-white">
+  <section
+    id="hero"
+    class="min-h-screen flex items-center justify-center bg-gray-50"
+  >
     <div class="text-center max-w-3xl">
       <h1
-        class="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-dark leading-tight tracking-tight animate-fade-in"
+        class="text-5xl md:text-7xl text-gray-900 dark:text-dark leading-tight tracking-tight"
       >
-        Hi, I'm
-        <span class="text-indigo-600 dark:text-indigo-400">Jayden.</span><br />
+        Hi, I'm <span class="text-gray-900 dark:text-gray-900">Jayden.</span
+        ><br />
       </h1>
 
-      <p
-        class="mt-6 text-lg md:text-xl text-gray-700 dark:text-gray-300 animate-fade-in delay-200"
-      >
-        Aspiring Software Engineer
+      <p class="mt-6 text-lg md:text-2xl text-gray-700">
+        Your <span class="satoshi font-light">creative</span> developer &
+        designer.
       </p>
 
-      <div class="mt-8 animate-fade-in delay-300">
-        <NuxtLink
-          to="Projects"
-          class="inline-block px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium text-lg hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 transition-all dark:focus:ring-indigo-800"
+      <div class="mt-8 relative inline-block">
+        <button
+          @click="scrollToProjects"
+          class="relative px-8 py-3 rounded-xl bg-gray-900 text-white text-lg font-medium uppercase tracking-wide shadow-lg transform transition-all duration-300 hover:ring-4 hover:ring-black hover:-translate-y-1 hover:shadow-2xl hover:bg-gray-50 hover:text-black"
         >
-          Get inspired by my projects! 👆
-        </NuxtLink>
+          Get inspired >
+        </button>
       </div>
     </div>
   </section>
 </template>
-
-<script setup></script>
-
-<style scoped>
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.8s ease-out both;
-}
-
-.delay-200 {
-  animation-delay: 0.2s;
-}
-.delay-300 {
-  animation-delay: 0.3s;
-}
-</style>

@@ -1,5 +1,23 @@
+<script setup>
+const tags = [
+  "Vue",
+  "Nuxt",
+  "TailwindCSS",
+  "PHP",
+  "Java Spring",
+  "Agile",
+  "Prototyping",
+  "UI/UX",
+  "Web Designing",
+  "Git Bash",
+  "Version Control",
+];
+
+const interests = [{}];
+</script>
+
 <template>
-  <section class="py-20 px-4 bg-gray-50 dark:bg-gray-900">
+  <section id="about" class="py-20 px-4 bg-gray-50 dark:bg-gray-900">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
       <!-- Profile Card -->
       <div
@@ -108,21 +126,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-const tags = [
-  "Vue",
-  "Nuxt",
-  "TailwindCSS",
-  "PHP",
-  "Java Spring",
-  "Agile",
-  "Prototyping",
-  "UI/UX",
-  "Web Designing",
-  "Git Bash",
-  "Version Control",
-];
-
-const interests = [{}];
-</script>
