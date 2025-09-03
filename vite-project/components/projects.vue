@@ -1,17 +1,37 @@
 <template>
-  <section
-    id="hero"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden"
-  >
-    <!-- Shapes following the cursor -->
-    <div class="shapes absolute inset-0">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-    </div>
+  <section id="projects" class="relative bg-gray-900 overflow-hidden">
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold text-white mb-12 text-center pt-12">
+      My Projects
+    </h2>
 
-    <!-- Custom cursor -->
-    <div class="cursor fixed top-0 left-0 pointer-events-none z-[1000]"></div>
+    <!-- Horizontal scroll container -->
+    <div id="sectionPin">
+      <div class="pin-wrap">
+        <div
+          v-for="(project, index) in projects"
+          :key="index"
+          class="project-card flex flex-row items-center bg-gray-800 rounded-3xl overflow-hidden shadow-2xl"
+        >
+          <!-- Left: Description -->
+          <div class="w-1/2 p-12 flex flex-col justify-center text-white">
+            <h3 class="text-3xl font-bold mb-4">{{ project.title }}</h3>
+            <p class="text-lg">{{ project.description }}</p>
+          </div>
+
+          <!-- Right: Image -->
+          <div
+            class="w-full h-full flex justify-center items-center bg-gray-100"
+          >
+            <img
+              :src="project.image"
+              :alt="project.title"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -24,47 +44,60 @@ const projects = ref([
   {
     title: "Project 1",
     description: "Description of Project 1",
-    image: "/focus.png",
+    image: "/Fuji.jpeg",
   },
   {
     title: "Project 2",
     description: "Description of Project 2",
-    image: "/images/project2.jpg",
+    image: "/restaurant.webp",
   },
   {
     title: "Project 3",
     description: "Description of Project 3",
-    image: "/images/project3.jpg",
+    image: "/logoWhite.webp",
   },
-  // Add more projects here
 ]);
 
 onMounted(() => {
   $gsap.registerPlugin(ScrollTrigger);
 
-  $gsap.utils.toArray(".project-card").forEach((card) => {
-    $gsap.from(card, {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: card,
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse",
-      },
-    });
+  const pinWrap = document.querySelector(".pin-wrap");
+  const pinWrapWidth = pinWrap.scrollWidth;
+  const horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+  $gsap.to(".pin-wrap", {
+    scrollTrigger: {
+      trigger: "#sectionPin",
+      pin: true,
+      scrub: 1,
+      start: "top top",
+      end: () => `+=${pinWrapWidth}`,
+    },
+    x: -horizontalScrollLength,
+    ease: "none",
   });
 });
 </script>
 
 <style scoped>
-.projects-container {
-  position: relative;
+#sectionPin {
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.pin-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
 }
 
 .project-card {
-  margin-bottom: 6rem;
+  flex-shrink: 0;
+  width: 70vw; /* each card width */
+  height: 60vh; /* card height */
+  margin-right: 3rem;
+  display: flex;
 }
 </style>
