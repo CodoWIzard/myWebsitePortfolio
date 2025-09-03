@@ -8,6 +8,25 @@ onMounted(() => {
     smooth: 1.2,
     effects: true,
   });
+
+  const handleMouseMove = (evt) => {
+    const mouseX = evt.clientX;
+    const mouseY = evt.clientY;
+
+    $gsap.set(".cursor", { x: mouseX, y: mouseY });
+
+    $gsap.to(".shape", {
+      x: mouseX,
+      y: mouseY,
+      stagger: -0.1,
+    });
+  };
+
+  window.addEventListener("mousemove", handleMouseMove);
+
+  onBeforeUnmount(() => {
+    window.removeEventListener("mousemove", handleMouseMove);
+  });
 });
 
 function scrollToSection(id) {
@@ -20,8 +39,18 @@ function scrollToSection(id) {
 </script>
 
 <template>
-  <div id="__nuxt" class="min-h-screen flex flex-col bg-gray-50 text-gray-900">
-    <header id="header" class="p-6 bg-gray-50 z-40 fixed w-full opacity-0">
+  <div id="__nuxt" class="min-h-screen flex flex-col bg-white text-gray-900">
+    <!-- Shapes following the cursor -->
+    <div class="shapes absolute inset-0">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor"></div>
+
+    <header id="header" class="p-6 bg-white z-40 fixed w-full opacity-0">
       <nav class="flex justify-between items-center max-w-6xl mx-auto">
         <h1
           class="text-6xl md:text-6xl text-gray-900 leading-tight tracking-tight animate-fade-in text-left"
@@ -72,3 +101,23 @@ function scrollToSection(id) {
     </main>
   </div>
 </template>
+
+<style scoped>
+body,
+* {
+  cursor: none;
+}
+
+/* Small circle cursor */
+.cursor {
+  background: #2128bd;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  z-index: 1000;
+  position: fixed;
+  pointer-events: none;
+}
+</style>

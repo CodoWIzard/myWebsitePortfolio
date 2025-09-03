@@ -1,31 +1,17 @@
 <template>
-  <section id="projects" class="relative bg-gray-900">
-    <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center pt-12"></h2>
-
-    <div class="projects-container">
-      <div
-        v-for="(project, index) in projects"
-        :key="index"
-        class="project-card relative min-h-screen flex overflow-hidden rounded-2xl shadow-lg"
-      >
-        <!-- Left side: Description -->
-        <div
-          class="w-1/2 pr-8 flex flex-col justify-center bg-blue-200 text-gray-900 px-12"
-        >
-          <h3 class="text-3xl font-bold mb-4">{{ project.title }}</h3>
-          <p class="text-gray-800">{{ project.description }}</p>
-        </div>
-
-        <!-- Right side: Image -->
-        <div class="w-1/2 flex justify-center items-center bg-yellow-200 px-12">
-          <img
-            :src="project.image"
-            alt=""
-            class="max-h-[70vh] object-contain rounded-xl shadow-lg"
-          />
-        </div>
-      </div>
+  <section
+    id="hero"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden"
+  >
+    <!-- Shapes following the cursor -->
+    <div class="shapes absolute inset-0">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
     </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor fixed top-0 left-0 pointer-events-none z-[1000]"></div>
   </section>
 </template>
 
