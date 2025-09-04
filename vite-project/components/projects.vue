@@ -1,11 +1,9 @@
 <template>
   <section id="projects" class="relative bg-gray-900 overflow-hidden">
-    <!-- Heading -->
     <h2 class="text-4xl font-bold text-white mb-12 text-center pt-12">
       My Projects
     </h2>
 
-    <!-- Horizontal scroll container -->
     <div id="sectionPin">
       <div class="pin-wrap">
         <div
@@ -13,13 +11,11 @@
           :key="index"
           class="project-card flex flex-row items-center bg-gray-800 rounded-3xl overflow-hidden shadow-2xl"
         >
-          <!-- Left: Description -->
           <div class="w-1/2 p-12 flex flex-col justify-center text-white">
             <h3 class="text-3xl font-bold mb-4">{{ project.title }}</h3>
             <p class="text-lg">{{ project.description }}</p>
           </div>
 
-          <!-- Right: Image -->
           <div
             class="w-full h-full flex justify-center items-center bg-gray-100"
           >
@@ -95,8 +91,8 @@ onMounted(() => {
 
 .project-card {
   flex-shrink: 0;
-  width: 70vw; /* each card width */
-  height: 60vh; /* card height */
+  width: 70vw;
+  height: 60vh;
   margin-right: 3rem;
   display: flex;
 }

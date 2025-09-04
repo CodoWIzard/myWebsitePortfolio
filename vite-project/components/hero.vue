@@ -37,14 +37,12 @@ onMounted(() => {
     id="hero"
     class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#222227]"
   >
-    <!-- Shapes following the cursor -->
     <div class="shapes absolute inset-0">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
       <div class="shape shape-3"></div>
     </div>
 
-    <!-- Text + Button -->
     <div
       class="content absolute inset-0 flex flex-col items-center justify-center gap-8 mix-blend-screen bg-white"
     >
@@ -60,12 +58,9 @@ onMounted(() => {
       </button>
     </div>
 
-    <!-- Custom cursor -->
     <div class="cursor fixed top-0 left-0 pointer-events-none z-[1000]"></div>
 
-    <!-- Volunteering indicator -->
     <div class="absolute bottom-40 left-8 flex items-center gap-3">
-      <!-- Ping circle -->
       <span class="radar-ping relative flex h-3 w-3">
         <span
           class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"
@@ -75,7 +70,6 @@ onMounted(() => {
         ></span>
       </span>
 
-      <!-- Text -->
       <span class="text-black text-sm font-medium">
         Available for volunteering
       </span>

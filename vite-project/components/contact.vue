@@ -9,7 +9,6 @@
       </p>
     </div>
 
-    <!-- Contact Form -->
     <div class="max-w-2xl mx-auto">
       <form
         action="https://formspree.io/f/mblyebpo"
@@ -46,7 +45,6 @@
       </form>
     </div>
 
-    <!-- Social Media Links -->
     <div class="mt-16 text-center space-y-6">
       <div class="flex justify-center gap-6">
         <a
@@ -57,7 +55,6 @@
         </a>
       </div>
 
-      <!-- GitHub Button -->
       <div class="mt-8">
         <a
           href="https://github.com/CodoWIzard"

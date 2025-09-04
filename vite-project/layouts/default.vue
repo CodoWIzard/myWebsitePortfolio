@@ -60,29 +60,24 @@ onMounted(() => {
 
 <template>
   <div id="__nuxt" class="min-h-screen flex flex-col bg-white text-gray-900">
-    <!-- Shapes background -->
     <div class="shapes absolute inset-0 pointer-events-none">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
       <div class="shape shape-3"></div>
     </div>
 
-    <!-- Cursor -->
     <div class="cursor"></div>
 
-    <!-- Header -->
     <header
       id="header"
       class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center mix-blend-screen"
     >
-      <!-- Logo -->
       <h1
         class="text-3xl md:text-4xl font-extrabold tracking-tight text-white hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
       >
         Jayden<span class="text-yellow-400">.</span>
       </h1>
 
-      <!-- Nav -->
       <ul class="flex gap-10 text-lg font-medium text-white">
         <li>
           <a
@@ -130,7 +125,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* Cursor */
 body,
 * {
   cursor: none;
@@ -149,11 +143,9 @@ body,
   transition: transform 0.15s ease;
 }
 
-/* Shapes */
 .shape {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
 }
 .shape-1 {
   background: #005ffe;
@@ -174,7 +166,6 @@ body,
   margin: -125px 0 0 -125px;
 }
 
-/* Nav links fancy underline */
 .nav-link::after {
   content: "";
   position: absolute;
