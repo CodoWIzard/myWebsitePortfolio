@@ -60,25 +60,25 @@ onMounted(() => {
 
 <template>
   <div id="__nuxt" class="min-h-screen flex flex-col bg-white text-gray-900">
-    <div class="shapes absolute inset-0 pointer-events-none">
+    <!-- <div class="shapes absolute inset-0 pointer-events-none">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
       <div class="shape shape-3"></div>
-    </div>
+    </div> -->
 
     <div class="cursor"></div>
 
     <header
       id="header"
-      class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center mix-blend-screen"
+      class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center"
     >
       <h1
-        class="text-3xl md:text-4xl font-extrabold tracking-tight text-white hover:text-yellow-300 transition-colors duration-300 cursor-pointer"
+        class="text-3xl md:text-4xl font-extrabold tracking-tight text-black hover:text-yellow-600 transition-colors duration-300 cursor-pointer"
       >
         Jayden<span class="text-yellow-400">.</span>
       </h1>
 
-      <ul class="flex gap-10 text-lg font-medium text-white">
+      <ul class="flex gap-10 text-lg font-medium text-black">
         <li>
           <a
             href="#hero"
